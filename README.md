@@ -1,4 +1,4 @@
-# Semantic Spotter lamaindex Project
+# Semantic Spotter Llamaindex Project
 Simplifying insurance document queries with the power of Retrieval-Augmented Generation (RAG) and advanced embeddings with Llama-Index and OpenAI's GPT models.
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
