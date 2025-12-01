@@ -85,15 +85,15 @@ No documentation will be made available for this project since this project only
 
 ## 🛠️ Challenges/Solution
 
-- Issue #1 – Redundant Re-Embedding
+  **Issue** #1 – Redundant Re-Embedding
 - ChromaDB was repeatedly embedding the same data, leading to unnecessary load and slower retrieval.
-  **Fix**: Introduced a cache layer to prevent redundant embeddings, reducing overhead and improving retrieval efficiency.
+- **Fix**: Introduced a cache layer to prevent redundant embeddings, reducing overhead and improving retrieval efficiency.
 
-- Issue #2 – Low Relevance in Retrieved Passages
+  **Issue** #2 – Low Relevance in Retrieved Passages
 - Some retrieved chunks weren’t the best candidates for answering user queries.
 - **Fix**: Implemented a Cross-Encoder–based reranker to refine passage selection, significantly boosting the quality and relevance of responses.
 
-- Issue #3 – Ensuring Answer Accuracy
+  **Issue** #3 – Ensuring Answer Accuracy
 - Validating the correctness of model-generated answers proved challenging.
 - **Fix**: Used GPT-4 as a verification layer to evaluate responses for accuracy and relevance. Added an optional human feedback loop to further strengthen answer validation and improve overall reliability.
 
@@ -116,11 +116,6 @@ No documentation will be made available for this project since this project only
 For any queries or feedback, feel free to reach out:
 
 - **Email**: nishusrivastava126@gmail.com
-- **GitHub**: 
+- **GitHub**: https://github.com/nishu-qatech
 
 ---
-
-
-```python
-
-```
