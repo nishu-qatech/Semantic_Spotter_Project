@@ -40,34 +40,37 @@ Example Use Cases:
 
 ## 🛠️ Tech Stack
 - **Language**: Python (developed and tested in Jupyter Notebook)
-- **Frameworks/Libraries**: Transformers, ChromaDB, PDFplumber, Llama-Index, Disk Cache
-- **APIs/Models**: OpenAI's GPT-4/ GPT-4o/ GPT-4o-mini or Gemini API or any other State-of-the-Art models
-- **Tools used**: Jupyter Notebook
+- **Frameworks/Libraries**: Transformers, ChromaDB, PDFPlumber, LlamaIndex, DiskCache
+- **APIs/Models**: OpenAI GPT-4 / GPT-4o / GPT-4o-mini, Google Gemini models, or any other state-of-the-art LLMs
+- **Tools used**: Jupyter Notebook for experimentation, development, and workflow execution
 
 ---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-Ensure you have the following installed:
-- Python 3.8+
-- Docker (optional, for containerized deployment)
+Before you begin, make sure the following are installed on your system:
+- Python 3.8+ – Required to run the core application and notebooks.
+- Docker (optional) - Useful if you prefer containerized deployment or want to standardize your environment across machines.
 
 ### Installation
 1. Clone the repo:
-git clone https://github.com/
+git clone (https://github.com/nishu-qatech/Semantic_Spotter_Project)
 
 2. Navigate to the project directory:
-cd Semantic_Spotter_AI_Project_GenAI_UpGrad_IIITB
+cd Semantic_Spotter_Project
 
 3. Install the required dependencies:
 pip install -r requirements.txt
 
-- Please note: OpenAI API keys are required for the project to function. You can obtain them from the OpenAI website and change the same in the code. We have updated the code and added more models to make it more dynamic in V2 of the project.
+- Please note:
+  OpenAI API keys are required for the project to function.
+  You can generate one from the OpenAI website and update it in the notebook or environment variables.
+  We have updated the code and added more models to make it more dynamic in V2 of the project.
 
-4. Run the main file from Jupyter environment:
-"Semantic_spotter_lamaindex_Sandeep.ipynb"
-
+4. Run the project notebook
+Open Jupyter Notebook and launch:
+"Semantic_spotter_Llamaindex_Nishu_Kumari.ipynb"
 ---
 
 ## 📖 Documentation
@@ -80,29 +83,40 @@ No documentation will be made available for this project since this project only
 
 ---
 
-## 🛠️ Challenges/Issues Faced with fixes
+## 🛠️ Challenges/Solution
 
-- [Issue #1](Cache layer was added in ChromaDB to prevent re-embedding of the data. This was done to avoid overloading the ChromaDB server with data and to make the retrieval process more efficient.)
+- Issue #1 – Redundant Re-Embedding
+- ChromaDB was repeatedly embedding the same data, leading to unnecessary load and slower retrieval.
+  **Fix**: Introduced a cache layer to prevent redundant embeddings, reducing overhead and improving retrieval efficiency.
 
-- [Issue #2](Cross Encoder based Reranker was added to better select the most relevant passages from the document. This was done to improve the quality of the answers to the user queries.)
+- Issue #2 – Low Relevance in Retrieved Passages
+- Some retrieved chunks weren’t the best candidates for answering user queries.
+- **Fix**: Implemented a Cross-Encoder–based reranker to refine passage selection, significantly boosting the quality and relevance of responses.
 
-- [Issue #3](Verifying the correctness of the answers given by the model was a challenge. We used GPT-4 to verify the answers provided by the model since it is a state-of-the-art model. This was done to ensure that the answers provided by the model are accurate and relevant. We also included a human feedback system to verify the correctness of the answers provided by the model. This was done to ensure that the answers provided by the model are accurate and relevant.)
+- Issue #3 – Ensuring Answer Accuracy
+- Validating the correctness of model-generated answers proved challenging.
+- **Fix**: Used GPT-4 as a verification layer to evaluate responses for accuracy and relevance. Added an optional human feedback loop to further strengthen answer validation and improve overall reliability.
 
 ---
 
 ## 🌟 Future Improvements
-- [ ] Add more selectable GPT models to the project(Gemini, Claude AI, Huggingface models etc).
-- [ ] Add more features to the project.
-- [ ] Add more selectable Vector Store to the project(Pinecone, Weaviate etc).
+- [ ] Expand support for additional GPT-style models (Gemini, Claude, Hugging Face models, etc.)
+- [ ] Introduce new advanced features to enhance usability and retrieval quality
+- [ ] Add support for additional vector stores such as Pinecone, Weaviate, and others for greater flexibility
 
+---
+
+## 📄License
+- This project is distributed under the MIT License.
+- For more details, please refer to the LICENSE file.
+  
 ---
 
 ## 💬 Contact
 For any queries or feedback, feel free to reach out:
 
-- **Email**: 
+- **Email**: nishusrivastava126@gmail.com
 - **GitHub**: 
-- **LinkedIn**:
 
 ---
 
